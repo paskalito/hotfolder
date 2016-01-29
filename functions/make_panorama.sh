@@ -1,7 +1,7 @@
 
 NOW=$(date +"%Y-%m-%d %H:%M")
 
-pto_gen *.jpg -o project.pto
+pto_gen * -o project.pto
 
 cpfind --multirow -o project.pto project.pto
 
