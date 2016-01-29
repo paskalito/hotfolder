@@ -1,4 +1,6 @@
 
+# source / credits : http://wiki.panotools.org/Panorama_scripting_in_a_nutshell#Why_would_you_do_that.3F
+
 NOW=$(date +"%Y-%m-%d %H:%M")
 
 pto_gen * -o project.pto

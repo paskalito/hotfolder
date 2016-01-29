@@ -26,12 +26,16 @@ do
   # if the first and secod time the foldersize didn't change and is grater than 0 start processing
 	if [ "$FOLDERSIZE1" -eq "$FOLDERSIZE2" ] && [ "$FOLDERSIZE2" -gt 0 ]; then
   # Start Processing > Enter your code here
+  
+  # move content from in folder to processing folder
   mv in/* processing
+  # go into processing folder / make it current path
   cd ./processing
-
+  
+  # load a script from functions / here it actually starts the processing of the data
   source "$RELPATH"/functions/make_panorama.sh
 
-
+  # go up one level
   cd ..
 
   else
