@@ -11,7 +11,7 @@ IMAGEHEIGHT=2200
 
 
 # ------------------------ code ---------------------------------------------
-# generate date and time variabel for the outpur folders
+# generate date and time variabel for the output folders
 NOW=$(date +"%Y-%m-%d %H:%M")
 
 # the ImageMagick convert code
