@@ -10,11 +10,17 @@ cd "$RELPATH"
 mkdir in out processing
 
 
+# mechanism to restart converting videos if script was aborted(computer shutdown)
+FOLDERSIZE=`du -s processing | cut -f1`
+
+find processing/ -type f -iname *_converted* -exec rm -f {} \;
+mv processing/* in
 
 
 #open a loop
 while :
 do
+
   #check the size of folder in, wait 5 second check again.
   FOLDERSIZE1=`du -s in | cut -f1`
   echo $FOLDERSIZE1
@@ -33,7 +39,7 @@ do
   cd ./processing
   
   # load a script from functions / here it actually starts the processing of the data
-  source "$RELPATH"/functions/make_panorama.sh
+  source "$RELPATH"/functions/convert_video.sh
 
   # go up one level
   cd ..
