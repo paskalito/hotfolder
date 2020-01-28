@@ -1,5 +1,5 @@
 # Info
-# In order to use this "function" need to set make_me_gif.sh in line 36 in the hotfolder.sh
+# In order to use this "function" need to set make_me_gif for the FUNCTION variabel in line 5 of the hotfolder.sh file
 # You need to have ImageMagick installed on your system. (http://www.imagemagick.org/)
 
 
