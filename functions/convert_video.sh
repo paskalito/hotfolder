@@ -1,5 +1,5 @@
 # Info
-# In order to use this "function" need to set convert_pictures.sh in line 36 in the hotfolder.sh
+# In order to use this "function" need to set convert_video for the FUNCTION variabel in line 5 of the hotfolder.sh file
 # You need to have HandBrakeCLI installed and in stadardpath
 
 # choose name of the preset you wanna use
@@ -18,5 +18,3 @@ for filename in *.*; do
 	mv "${filename%.*}_converted.m4v" ../out/
 	rm "$filename"
 done
-
-fi
