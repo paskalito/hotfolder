@@ -19,6 +19,16 @@ Because EVERYONE knows how to copy file(s) into a folder.
 - Easily fill in at the very top what your hotfolder should do
 - nice new explanations in the code
 
+# Available Functios
+
+```
+# convert_picures - Convert and Resize Pictures (uses ImageMagik)
+# convert_video - Convert/Compress Videos (uses HandBrake_CLI)
+# make_me_gif - Convert a bunge of picures into an animated gif (choose your outputsize) (uses ImageMagik)
+# compress_pdf - Compress PDF's (uses Ghostscript)
+# make_panorama - [EXPERIMENTAL] Stiches panorama Shots toghether into one Panorama Image (uses hugin)
+```
+
 
 # Install
 
