@@ -1,3 +1,7 @@
+# THIS FUNCTION IS "EXPERIMENTAL" - IT GREATLY VARIES IN OUTPUT QUALITY
+
+# In order to use this "function" need to set make_panorama for the FUNCTION variabel in line 5 of the hotfolder.sh file
+
 
 # source / credits : http://wiki.panotools.org/Panorama_scripting_in_a_nutshell#Why_would_you_do_that.3F
 
