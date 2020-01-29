@@ -2,7 +2,7 @@
 
 # What should this instance of hotfolder do?
 # Fill in the name of the function you want to use
-FUNCTION=convert_video
+FUNCTION=make_panorama
 
 # The Following options are available:
 
@@ -46,7 +46,7 @@ if ! [ "$(ls -A in)" ]; then
 	# to reduce processing load lets wait some seconds till we check again.	
 	sleep 5
 else
-	echo 'Oh something is in the "in" Folder let us start then'
+	echo 'Oh something is in the "in" Folder let us watch it more closely'
 	#check the size of folder in, wait 5 second check again.
 	FOLDERSIZE1=`du -s in | cut -f1`
 	echo $FOLDERSIZE1

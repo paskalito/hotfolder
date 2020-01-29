@@ -17,10 +17,17 @@ GHOSTSCRIPTPRESET="ebook"
 
 # ------------------------ code ---------------------------------------------
 
-for filename in *.*; do
-	# the ghostcript compress command
-	# gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -sOutputFile=output2.pdf $filename
-	gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/${GHOSTSCRIPTPRESET%.*} -sOutputFile="${filename%.*}_compressed_${GHOSTSCRIPTPRESET%.*}.pdf" "$filename"
-	mv "${filename%.*}_compressed_${GHOSTSCRIPTPRESET%.*}.pdf" ../out/
-	rm "$filename"
-done
+if hash gs 2>/dev/null; then
+	for filename in *.*; do
+		# the ghostcript compress command
+		# gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -sOutputFile=output2.pdf $filename
+		gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/${GHOSTSCRIPTPRESET%.*} -sOutputFile="${filename%.*}_compressed_${GHOSTSCRIPTPRESET%.*}.pdf" "$filename"
+		mv "${filename%.*}_compressed_${GHOSTSCRIPTPRESET%.*}.pdf" ../out/
+		rm "$filename"
+	done
+else
+	echo ERROR: Could not find GhostScript >&2
+	echo GhostScript needs to installed and in standardpath for compress_pdf to work >&2
+fi
+
+	

@@ -12,16 +12,25 @@ DELAY=5
 
 
 # ------------------------ code ---------------------------------------------
-# generate date and time variabel for the output folders
-NOW=$(date +"%Y-%m-%d %H:%M")
+if hash mogrify 2>/dev/null; then
+	# generate date and time variabel for the output folders
+	NOW=$(date +"%Y-%m-%d %H:%M")
 
-# the ImageMagick convert code
-mogrify -verbose -format jpg -resize ''$IMAGEWIDTH'x'$IMAGEHEIGHT'>' *
-# the ImageMagick code who converts the pictures into the animated gif
-convert -delay "$DELAY" * animated.gif
-# make a new dir for the files to be safed in
-mkdir ../out/Conversion-"$NOW"
-# move all the files of your choosen output filetype into that folder
-mv *.gif ../out/Conversion-"$NOW"/
-# delete the rest (former files is imageformat was changed) // cleanup the process folder
-rm *
+	# the ImageMagick convert code
+	mogrify -verbose -format jpg -resize ''$IMAGEWIDTH'x'$IMAGEHEIGHT'>' *
+	# the ImageMagick code who converts the pictures into the animated gif
+	convert -delay "$DELAY" * animated.gif
+	# make a new dir for the files to be safed in
+	mkdir ../out/Conversion-"$NOW"
+	# move all the files of your choosen output filetype into that folder
+	mv *.gif ../out/Conversion-"$NOW"/
+	# delete the rest (former files is imageformat was changed) // cleanup the process folder
+	rm *
+	
+else
+	echo ERROR: Could not find ImageMagick >&2
+	echo ImageMagick needs to installed and in standardpath for make_me_gif to work >&2
+fi
+
+
+

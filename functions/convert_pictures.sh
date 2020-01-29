@@ -11,15 +11,26 @@ IMAGEHEIGHT=2200
 
 
 # ------------------------ code ---------------------------------------------
-# generate date and time variabel for the output folders
-NOW=$(date +"%Y-%m-%d %H:%M")
 
-# the ImageMagick convert code
-mogrify -verbose -format "$OUTPUTFORMAT" -resize ''$IMAGEWIDTH'x'$IMAGEHEIGHT'>' *
 
-# make a new dir for the files to be safed in
-mkdir ../out/Conversion-"$NOW"
-# move all the files of your choosen output filetype into that folder
-mv *."$OUTPUTFORMAT" ../out/Conversion-"$NOW"/
-# delete the rest (former files is imageformat was changed) // cleanup the process folder
-rm *
+if hash mogrify 2>/dev/null; then
+	# generate date and time variabel for the output folders
+	NOW=$(date +"%Y-%m-%d %H:%M")
+
+	# the ImageMagick convert code
+	mogrify -verbose -format "$OUTPUTFORMAT" -resize ''$IMAGEWIDTH'x'$IMAGEHEIGHT'>' *
+
+	# make a new dir for the files to be safed in
+	mkdir ../out/Conversion-"$NOW"
+	# move all the files of your choosen output filetype into that folder
+	mv *."$OUTPUTFORMAT" ../out/Conversion-"$NOW"/
+	# delete the rest (former files is imageformat was changed) // cleanup the process folder
+	rm *
+	
+else
+	echo ERROR: Could not find ImageMagick >&2
+	echo ImageMagick needs to installed and in standardpath for convert_pictures to work >&2
+fi
+
+
+
