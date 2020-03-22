@@ -6,7 +6,7 @@ FUNCTION=make_panorama
 
 # The Following options are available:
 
-# convert_picures - Convert and Resize Pictures (uses ImageMagik)
+# convert_pictures - Convert and Resize Pictures (uses ImageMagik)
 # convert_video - Convert/Compress Videos (uses HandBrake_CLI)
 # make_me_gif - Convert a bunge of picures into an animated gif (choose your outputsize) (uses ImageMagik)
 # compress_pdf - Compress PDF's (uses Ghostscript)
