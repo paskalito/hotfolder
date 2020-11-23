@@ -12,7 +12,7 @@ FUNCTION=convert_audio
 # compress_pdf - Compress PDF's (uses Ghostscript)
 # make_panorama - [EXPERIMENTAL] Stiches panorama Shots toghether into one Panorama Image (uses hugin)
 # zip - Zip files (uses zip)
-# convert_audio - Convert/Compress Audio Files (uses ffmpeg)
+# convert_audio - Convert/Compress/Extract Audio Files (uses ffmpeg)
 
 
 
