@@ -66,7 +66,7 @@ else
 			  
 			# load a script from functions / here it actually starts the processing of the data
 			# replaced source with . for bigger compatibility
-			. "$RELPATH"/functions/"$FUNCTION".sh
+			. ../functions/"$FUNCTION".sh
 
 			# go up one level (because in the rest of the script we assume to be at the base level of our folderstructure)
 			cd ..
