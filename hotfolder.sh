@@ -2,7 +2,7 @@
 
 # What should this instance of hotfolder do?
 # Fill in the name of the function you want to use
-FUNCTION=make_panorama
+FUNCTION=convert_audio
 
 # The Following options are available:
 
@@ -11,7 +11,8 @@ FUNCTION=make_panorama
 # make_me_gif - Convert a bunge of picures into an animated gif (choose your outputsize) (uses ImageMagik)
 # compress_pdf - Compress PDF's (uses Ghostscript)
 # make_panorama - [EXPERIMENTAL] Stiches panorama Shots toghether into one Panorama Image (uses hugin)
-
+# zip - Zip files (uses zip)
+# convert_audio - Convert/Compress Audio Files (uses ffmpeg)
 
 
 
