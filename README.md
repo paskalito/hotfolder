@@ -22,19 +22,21 @@ Because EVERYONE knows how to copy file(s) into a folder.
 # Available Functios
 
 ```
-# convert_picures - Convert and Resize Pictures (uses ImageMagik)
+# convert_pictures - Convert and Resize Pictures (uses ImageMagik)
 # convert_video - Convert/Compress Videos (uses HandBrake_CLI)
 # make_me_gif - Convert a bunge of picures into an animated gif (choose your outputsize) (uses ImageMagik)
 # compress_pdf - Compress PDF's (uses Ghostscript)
 # make_panorama - [EXPERIMENTAL] Stiches panorama Shots toghether into one Panorama Image (uses hugin)
+# zip - Zip files (uses zip)
+# convert_audio - Convert/Compress/Extract Audio Files (uses ffmpeg)
 ```
 
 
 # Install
 
 Download this repo
-make "hofolder.sh" executable (chmod +x /path/to/hofolder.sh)
-doubleclick it or run it in a terminal. (sh /path/to/hofolder.sh)
+make "hofolder.sh" executable (`chmod +x /path/to/hofolder.sh`) and doubleclick it (depending on your system)
+or run it in a terminal. (`sh /path/to/hofolder.sh`)
 
 # what it does. / how it works
 
@@ -51,16 +53,17 @@ and clear the processing folder (rm *)
 then you go up again
 cd ..
 
-# what is that usefull for
+# what is it usefull for
 
 For anything thats easy to automate requires input files and you expect and outputfile at the end
 
 examples
 -Image Coversion (ImageMagick)
--Audio Conversion (???)
+-Audio Conversion (ffmpeg)
 -Panorama Stitching (Panotools)
 
 I will uplaod all the functions for the usecases i have and develop.
+You are Welcome to add yours.
 
 
 
