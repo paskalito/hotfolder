@@ -41,13 +41,11 @@ or run it in a terminal. (`sh /path/to/hofolder.sh`)
 
 ### Install from Terminal
 
-``
+````
 git clone https://github.com/paskalito/hotfolder.git
-
 chmod +x ./hotfolder/hotfolder.sh
-
 sh ./hotfolder/hotfolder.sh
-``
+````
 
 # what it does. / how it works
 
