@@ -43,7 +43,9 @@ or run it in a terminal. (`sh /path/to/hofolder.sh`)
 
 ``
 git clone https://github.com/paskalito/hotfolder.git
+
 chmod +x ./hotfolder/hotfolder.sh
+
 sh ./hotfolder/hotfolder.sh
 ``
 
