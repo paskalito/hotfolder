@@ -78,10 +78,10 @@ You are Welcome to add yours.
 # Design guidelines for Developers
 
 1. KISS - Keep it simple and Stupid. Always ask yourself: is there an easier way to archieve my goal.
-2. Keep everything that you might create during your processing within the provessing-folder. - This is to ensure a clean "rootstructure" at any time/case.
-2.1 Only Move your final Product to ../out
-2.2 Make sure to clear out the processing folder when your done. So everyone has always a clean place to start from.
+2. Keep everything that you might create during your processing within the provessing-folder. - This is to ensure a clean "rootstructure" at any time/case.  
+2.1 Only Move your final Product to ../out  
+2.2 Make sure to clear out the processing folder when your done. So everyone has always a clean place to start from.  
 3. Put all the Variables of your function an enduser needs or might want to change above the ----code----- line.
-4. Comment your Code. 
+4. Comment your Code.  
 4.1 Give all the information an enduser needs to run your function meaningfull in first few lines of the function-file. (including known limitations)
 
