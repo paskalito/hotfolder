@@ -17,7 +17,7 @@ if hash HandBrakeCLI 2>/dev/null; then
 		# HandBrakeCLI -i "$filename" -o "${filename%.*}_converted.m4v" --preset="High Profile"
 		nice -n 19 HandBrakeCLI -i "$filename" -o "${filename%.*}_converted.m4v" --preset="Fast 1080p30"
 		mv "${filename%.*}_converted.m4v" ../out/
-		rm "$filename"
+		rm -f "$filename"
 	done
 	
 else
