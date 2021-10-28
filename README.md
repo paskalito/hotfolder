@@ -47,6 +47,21 @@ chmod +x ./hotfolder/hotfolder.sh
 sh ./hotfolder/hotfolder.sh
 ````
 
+### Configure Autostart the Script with `cron` and `flock`
+type `crontab -e` in your terminal
+
+paste
+
+````
+*/1 * * * * /usr/bin/flock -n /tmp/fcj.lockfile sh /path/to/hotfolder/hotfolder.sh
+````
+at the end of the file and Save.
+
+this starts the script every minute, but wil not start it more than one time. (basically it will always run and resart within one minute if the process crashes)
+
+make sure cron is running
+`sudo service cron status`
+
 # what it does. / how it works
 
 it makes 3 directories right on the level where the script is
